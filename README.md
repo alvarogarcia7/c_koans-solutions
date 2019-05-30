@@ -1,26 +1,16 @@
 # c_koans
 
-[![Build Status](https://travis-ci.org/c-koans/c_koans.svg?branch=develop)](https://travis-ci.org/c-koans/c_koans)
+## Running the koans
 
-A kōan 公案 (pinyin: gōng'àn) is a story, question, or statement, which is used in Zen practice to provoke the "great doubt" and test a student's progress in Zen practice.
+```bash
+docker run -v $(pwd):/app -it conanio/clang7 /bin/bash
 
-Inspired by [ruby koans](http://rubykoans.com/) you may learn the syntax and practices of C through a series of lessons in the form of [Unit tests](https://en.wikipedia.org/wiki/Unit_testing). These preprepared tests are all failing, by going through each one and repairing them to make them pass you will learn a small component of the C programming language.
+## inside docker
+export LD_LIBRARY_PATH=/usr/local/lib:/app/criterion/lib/
+make clean all
+./bin/c_koans
+```
 
-The test are written in the [Criterion](https://github.com/Snaipe/Criterion) unit testing library.
-
-## How to run
-
-### On Linux/OSX:
-
-1. Install [Criterion](https://github.com/Snaipe/Criterion)
-2. run `make clean all`
-3. run `bin/c_koans`
-4. Start fixing!
-
-### On Windows:
-
-1. Get a Linux command line ([Cygwin](http://www.cygwin.com/), [Windows Linux Subsystem](https://docs.microsoft.com/en-us/windows/wsl/install-win10), or whichever you prefer)
-2. Follow the Linux/OSX instructions!
 
 ## Sections
 
