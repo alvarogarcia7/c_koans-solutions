@@ -14,7 +14,7 @@ Test(about_basics, intro)
         Tests are built on assertions, simple evaluations of truth in order to
         assess the correctness of code
     */
-    cr_assert(false,
+    cr_assert(true,
         "This should be true, assertion - a confident and forceful "
         "statement of fact");
     /*
@@ -26,18 +26,18 @@ Test(about_basics, intro)
         interpret
         the input as an int
     */
-    cr_assert(false == 1,
+    cr_assert(false == 0,
         "In C there is no false, there is only zero. false is in fact: %d",
         false);
-    cr_assert(true == 0,
+    cr_assert(true == 1,
         "In C there is no true, there is only not zero. true is in fact: %d",
         true);
     /*
         Criterion has more descriptive tests that can evaluate the same thing
         eq is short for equals
     */
-    cr_assert_eq(false, 1, "Nothing is not something");
-    cr_assert_eq(true, 0, "Something is not nothing");
+    cr_assert_eq(false, 0, "Nothing is not something");
+    cr_assert_eq(true, 1, "Something is not nothing");
 }
 
 Test(about_basics, variables)
