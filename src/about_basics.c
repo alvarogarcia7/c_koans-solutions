@@ -72,14 +72,14 @@ Test(about_basics, variables)
     //     "primitive data type to increase the upper "
     //     "limit by only storing positive values");
 
-    // long long ll = TODO;
+    long long ll = 255;
 
-    // cr_expect_eq(ll, 0xFF,
-    //     "A number literal starting with 0x will be interpreted as hexadecimal");
-    // cr_expect_eq(ll, 0b11111111,
-    //     "A number literal starting with 0b will be interpreted as binary");
-    // cr_assert_eq(ll, 0777,
-    //     "A number literal starting with 0 will be interpreted as octal");
+    cr_expect_eq(ll, 0xFF,
+        "A number literal starting with 0x will be interpreted as hexadecimal");
+    cr_expect_eq(ll, 0b11111111,
+        "A number literal starting with 0b will be interpreted as binary");
+    cr_assert_eq(ll, 0377,
+        "A number literal starting with 0 will be interpreted as octal");
 
     // double d = 3.50;
     // cr_assert_float_eq(d, (7 / 2), 0.000001,
