@@ -82,7 +82,7 @@ Test(about_control_statements, loops)
     }
 
     cr_assert_eq(
-        var, TODO, "Determine the result of the execution of this loop.");
+        var, 10, "Determine the result of the execution of this loop.");
 
     /*
         The for loop should also feel familar.
@@ -104,7 +104,7 @@ Test(about_control_statements, loops)
         have any statements.
     */
     cr_assert_eq(
-        var, TODO, "Determine the result of the for loop's execution.");
+        var, 10, "Determine the result of the for loop's execution.");
 
     /*
         The final loop, the do-while, executes the same as the while,
@@ -117,7 +117,7 @@ Test(about_control_statements, loops)
     } while (var < 10);
 
     cr_assert_eq(
-        var, TODO, "Determine the result of the do-while loop's execution");
+        var, 10, "Determine the result of the do-while loop's execution");
 }
 
 Test(about_control_statements, goto_and_labels)
