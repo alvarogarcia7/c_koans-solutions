@@ -25,7 +25,7 @@ Test(about_functions, function_basics)
     cr_assert_eq(return_5(), 5, "What does this function return?");
 
     /* Of course, functions can be recursive */
-    cr_assert_eq(fib(5), fib(4)+fib(3), "What is the 5th fibonacci number?");
+    cr_assert_eq(fib(5), 5, "What is the 5th fibonacci number?");
 }
 
 /*
