@@ -23,7 +23,7 @@ Test(about_control_statements, ifs)
         var = 2;
 
     /* To pass this test, determine where the control flow will go. */
-    cr_assert_eq(var, TODO, "If statements work just like other languages");
+    cr_assert_eq(var, 1, "If statements work just like other languages");
 
     /* Of course, C also has the familiar else-if */
     if (1 > 2)
@@ -33,7 +33,7 @@ Test(about_control_statements, ifs)
     else
         var = 4;
 
-    cr_assert_eq(var, TODO, "Determine the control flow for this block, too");
+    cr_assert_eq(var, 4, "Determine the control flow for this block, too");
 }
 
 Test(about_control_statements, switch_block)
