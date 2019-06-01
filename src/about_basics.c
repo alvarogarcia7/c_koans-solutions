@@ -55,12 +55,12 @@ Test(about_basics, variables)
     short s = 3054;
     cr_assert_eq(s, 0xBEE, "A short is 2 bytes");
 
-    // int i = TODO;
-    // cr_assert_eq(i, 0xBADBEEF, "A int is 4 bytes");
+    int i = 195935983;
+    cr_assert_eq(i, 0xBADBEEF, "A int is 4 bytes");
 
-    // long l = TODO;
-    // cr_assert_eq(l, 0xDEBA7AB1E,
-    //     "A long is a larger integer type than int (supports unsigned).");
+    long l = 59788208926;
+    cr_assert_eq(l, 0xDEBA7AB1E,
+        "A long is a larger integer type than int (supports unsigned).");
 
     // unsigned int ui = TODO;
     // /*
