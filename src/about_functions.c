@@ -65,16 +65,16 @@ Test(about_functions, function_scope_and_vars)
 
     modify_global();
     modify_global();
-    cr_assert_eq(modify_global(), TODO,
+    cr_assert_eq(modify_global(), 3,
         "What is the value of global_var after the thrid call?");
 
     modify_local();
     modify_local();
-    cr_assert_eq(modify_local(), TODO,
+    cr_assert_eq(modify_local(), 1,
         "What is the value of the local variable after the third call?");
 
     modify_local_static();
     modify_local_static();
-    cr_assert_eq(modify_local_static(), TODO,
+    cr_assert_eq(modify_local_static(), 3,
         "What is the value of the local static variable after the third call?");
 }
