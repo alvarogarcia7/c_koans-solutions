@@ -19,15 +19,15 @@ Test(about_pointers, pointers_and_addresses)
     int *jptr = &j;
 
     cr_assert_eq(
-        sizeof(i), TODO, "What is the size of an int on a 64 bit machine?");
-    cr_assert_eq(sizeof(iptr), TODO,
+        sizeof(i), 4, "What is the size of an int on a 64 bit machine?");
+    cr_assert_eq(sizeof(iptr), 8,
         "What is the size of an address on a 64 bit machine?");
 
     /* The '*' operator has another meaning when used not in a declaration to
      * 'dereference' a pointer, and give the value at that address.
     */
 
-    cr_assert_eq(*jptr, TODO, "What is the value that jptr 'points' to?");
+    cr_assert_eq(*jptr, 20, "What is the value that jptr 'points' to?");
 
     /*
      * Multi-variable declarations mixing pointers and the type it points to
@@ -41,10 +41,10 @@ Test(about_pointers, pointers_and_addresses)
     int* m, n;
     /* clang-format on */
 
-    cr_assert_eq(sizeof(k), TODO, "What type is k?");
-    cr_assert_eq(sizeof(l), TODO, "What type is l?");
-    cr_assert_eq(sizeof(m), TODO, "What type is m?");
-    cr_assert_eq(sizeof(n), TODO, "What type is n?");
+    cr_assert_eq(sizeof(k), 4, "What type is k?");
+    cr_assert_eq(sizeof(l), 8, "What type is l?");
+    cr_assert_eq(sizeof(m), 8, "What type is m?");
+    cr_assert_eq(sizeof(n), 4, "What type is n?");
 }
 
 Test(about_pointers, pointers_as_function_arguments)
