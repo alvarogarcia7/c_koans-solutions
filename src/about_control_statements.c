@@ -58,7 +58,7 @@ Test(about_control_statements, switch_block)
         break;
     }
 
-    cr_assert_eq(var, TODO, "Determine the control flow for this block.");
+    cr_assert_eq(var, 200, "Determine the control flow for this block.");
 }
 
 Test(about_control_statements, loops)
