@@ -141,5 +141,5 @@ Test(about_control_statements, goto_and_labels)
     */
 label:
     cr_assert_eq(
-        var, TODO, "Determine the result of the flow of the function.");
+        var, 10, "Determine the result of the flow of the function.");
 }
