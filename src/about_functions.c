@@ -22,10 +22,10 @@ Test(about_functions, function_basics)
         to methods in Java. Since there are no Classes in C, C functions can be
         thought of as static methods in Java.
     */
-    cr_assert_eq(return_5(), TODO, "What does this function return?");
+    cr_assert_eq(return_5(), 5, "What does this function return?");
 
     /* Of course, functions can be recursive */
-    cr_assert_eq(fib(5), TODO, "What is the 5th fibonacci number?");
+    cr_assert_eq(fib(5), fib(4)+fib(3), "What is the 5th fibonacci number?");
 }
 
 /*
