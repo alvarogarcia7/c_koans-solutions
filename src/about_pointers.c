@@ -58,7 +58,7 @@ Test(about_pointers, pointers_as_function_arguments)
 
     double_an_int(&i);
 
-    cr_assert_eq(i, TODO, "What is the new value of i?");
+    cr_assert_eq(i, 20, "What is the new value of i?");
 }
 
 Test(about_pointers, pointers_arrays_and_arithmetic)
