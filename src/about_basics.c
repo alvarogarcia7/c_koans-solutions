@@ -81,9 +81,9 @@ Test(about_basics, variables)
     cr_assert_eq(ll, 0377,
         "A number literal starting with 0 will be interpreted as octal");
 
-    // double d = 3.50;
-    // cr_assert_float_eq(d, (7 / 2), 0.000001,
-    //     "Just like Java, C does integer division for 7/2");
+    double d = 3.0;
+    cr_assert_float_eq(d, (7 / 2), 0.000001,
+        "Just like Java, C does integer division for 7/2");
 
     // double d2 = 350e-2;
     // cr_assert_float_eq(d2, 3 + (1 / 2), 0.000001,
