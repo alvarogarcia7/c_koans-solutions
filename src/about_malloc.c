@@ -94,10 +94,10 @@ Test(about_malloc, calloc)
         memory will be a valid C-string of length 0.
     */
 
-    cr_assert_eq(strlen(s), TODO_NZ, "What is the length of an empty string?");
+    cr_assert_eq(strlen(s), 0, "What is the length of an empty string?");
     strcpy(s, "foo");
 
-    cr_assert_eq(strlen(s), TODO, "What is the new length?");
+    cr_assert_eq(strlen(s), 3, "What is the new length?");
 }
 
 Test(about_malloc, realloc)
