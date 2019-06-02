@@ -75,7 +75,7 @@ Test(about_malloc, free)
     ip = NULL;
 
     cr_assert_eq(
-        ip, (void *)TODO_NZ, "What is ip now? What would happen if we \
+        ip, (void *)0, "What is ip now? What would happen if we \
         dereference ip?");
 }
 
