@@ -28,7 +28,7 @@ Test(about_malloc, malloc_intro)
     */
     int *i = malloc(sizeof(int));
     *i = 5;
-    cr_assert_eq(*i, 6);
+    cr_assert_eq(*i, 5);
 
     /*
         If you allocate space for a variable on the stack in a function call,
@@ -40,7 +40,7 @@ Test(about_malloc, malloc_intro)
         to return new pointers should allocate space for them using malloc.
     */
     int *return_ptr = malloc_func(); /* goto line 5 */
-    cr_assert_eq(*return_ptr, TODO);
+    cr_assert_eq(*return_ptr, 15);
 }
 
 Test(about_malloc, free)
