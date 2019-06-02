@@ -73,9 +73,9 @@ Test(about_pointers, pointers_arrays_and_arithmetic)
     int *p1 = &a[0];
     int *p2 = &a[1];
 
-    cr_assert_eq(*a, TODO, "Remember what the ");
-    cr_assert_eq(*p1, TODO, "What does p1 point to?");
-    cr_assert_eq(*p2, TODO, "What does p2 point to?");
+    cr_assert_eq(*a, 1, "Remember what the ");
+    cr_assert_eq(*p1, 1, "What does p1 point to?");
+    cr_assert_eq(*p2, 2, "What does p2 point to?");
 
     /*
      * Since p1 now points to the array, we can treat p1 as being the array
@@ -84,20 +84,20 @@ Test(about_pointers, pointers_arrays_and_arithmetic)
      * size of the type that is being pointed to.
     */
 
-    cr_assert_eq(*(p1 + 1), TODO, "What is the value at this address?");
+    cr_assert_eq(*(p1 + 1), 2, "What is the value at this address?");
 
-    cr_assert_eq(p1[1], TODO,
+    cr_assert_eq(p1[1], 2,
         "Bracket notation is just syntactic sugar for pointer arithmetic.");
 
     /*
      * Think about this example, if p1 points to the first int and p2 points to
      * the second int, what is the number of bytes between the two addresses?
     */
-    cr_assert_eq((long)((long)p2 - (long)p1), TODO,
+    cr_assert_eq((long)((long)p2 - (long)p1), 4,
         "What is the number of bytes diffence?");
 
     cr_assert_eq(
-        (int)(p2 - p1), TODO, "What is the number of ints difference?");
+        (int)(p2 - p1), 1, "What is the number of ints difference?");
 }
 
 Test(about_pointers, function_pointers)
