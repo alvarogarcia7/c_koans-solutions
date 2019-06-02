@@ -117,12 +117,16 @@ Test(about_malloc, realloc)
 
     ip = realloc(ip, sizeof(long));
 
+    //printf("%lu\n", *(unsigned short *)ip);    
+
     cr_assert_eq(
-        *(unsigned long *)ip, TODO, "What bytes of ip were preserved \
+        *(unsigned long *)ip, 0xDEADBEEF, "What bytes of ip were preserved \
         when it is increased in size?");
 
     ip = realloc(ip, sizeof(short));
 
+    //printf("%hu\n", *(unsigned short *)ip);
+
     /* Hint: our VMs are little endian */
-    cr_assert_eq(*(unsigned short *)ip, TODO, "What bytes were preserved now?");
+    cr_assert_eq(*(unsigned short *)ip, 0xBEEF, "What bytes were preserved now?");
 }
