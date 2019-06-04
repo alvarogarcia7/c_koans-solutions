@@ -129,7 +129,7 @@ Test(about_preprocessor, macro_concatination)
         To complete this test, assert that THIS_IS(TRUE)!
         Be wary of your usage of capital letters.
     */
-    cr_assert(THIS_IS(FALSE), "Concatination not completed.");
+    cr_assert(THIS_IS(TRUE), "Concatination not completed.");
 }
 
 #define VARIADIC_ARGUMENTS(...) #__VA_ARGS__
