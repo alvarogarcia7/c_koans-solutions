@@ -1,5 +1,9 @@
 # c_koans
 
+## Description
+
+The original work is from [C-Koans](https://github.com/c-koans/c_koans)
+
 ## Running the koans
 
 ```bash
