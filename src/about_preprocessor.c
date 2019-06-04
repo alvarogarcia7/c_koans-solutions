@@ -54,10 +54,12 @@ Test(about_preprocessor, macro_definitions)
 }
 
 #ifndef DEFINE_ME
-#define FIVE 0
+#define FIVE 5
 #else
 #define FIVE 5
 #endif /* DEFINE_ME */
+
+#define MOVE_ME
 
 #ifndef MOVE_ME
 #define SEVEN 0
@@ -65,7 +67,6 @@ Test(about_preprocessor, macro_definitions)
 #define SEVEN 7
 #endif /* MOVE_ME */
 
-#define MOVE_ME
 
 Test(about_preprocessor, conditional_defines)
 {
