@@ -13,7 +13,7 @@
 
 #define JOKER "JOKER"
 
-#define MAX(a, b) (a)
+#define MAX(a, b) a>b?a:b
 
 Test(about_preprocessor, macro_definitions)
 {
@@ -28,7 +28,7 @@ Test(about_preprocessor, macro_definitions)
 
     /* Fix the string we are comparing with what JOKER will be replaced with. */
 
-    const char *CHANGE_ME = "MONA";
+    const char *CHANGE_ME = JOKER;
     cr_assert(strcmp(CHANGE_ME, JOKER) == 0,
         "Macro JOKER not compared with what it was replaced with!");
 
